@@ -8,6 +8,8 @@
 
         <a-assets>
             <img id="brick" src="brick.jpg">
+            <a-asset-item id="cablecar-obj" src="cablecar.obj"></a-asset-item>
+            <a-asset-item id="cablecar-mtl" src="cablecar.mtl"></a-asset-item>
         </a-assets>
 
 
@@ -33,8 +35,19 @@
             <a-sphere>
         <a-entity>
 
-            <a-plane src="#brick" width="40" height="40" rotation="-90 0 0" position="0 -50 0">
+            <a-plane src="#brick" 
+                width="40" 
+                height="40" 
+                rotation="-90 0 0" 
+                position="0 -50 0"
+                repeat="10 10">
             </a-plane>
+
+            <a-entity
+                obj-model="obj: #cablecar-obj; mtl: #cablecar-mtl"
+                scale="5 5 5">
+            </a-entity>
+
 
     </a-scene>
   </body>
